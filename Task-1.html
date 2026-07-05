@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Icon1.jpeg" type="image/x-icon">
+<title>Cafnova</title>
+<style>
+  * { box-sizing: border-box; }
+  body{
+    margin:0;
+    font-family: 'Georgia', serif;
+    background:#f7f2ec;
+    color:#2c1e14;
+    line-height:1.6;
+  }
+  header{
+    background:#2c1e14;
+    color:#f3e9db;
+    padding:24px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  header h1{ margin:0; font-size:1.6rem; }
+  nav a{
+    color:#f3e9db;
+    text-decoration:none;
+    margin-left:24px;
+    font-family: 'Georgia', serif;
+    font-size:0.95rem;
+  }
+  nav a:hover{ color:#e0925c; }
+
+  main{ max-width:800px; margin:0 auto; padding:40px; }
+  h2{ color:#8a4a2c; }
+  img{
+    max-width:100%;
+    border-radius:10px;
+    font-family: 'Georgia', serif;
+    margin:20px 0;
+  }
+  p{ font-size:1.05rem; }
+  .cta-btn{
+    background:#bf6e3d;
+    color:#fff;
+    border:none;
+    padding:12px 26px;
+    border-radius:6px;
+    font-size:1rem;
+    font-family: 'Georgia', serif;
+    cursor:pointer;
+    margin-top:10px;
+  }
+  .cta-btn:hover{ background:#a05a2e; }
+  footer{
+    text-align:center;
+    padding:20px;
+    background:#2c1e14;
+    color:#c9b8a3;
+    font-family: 'Georgia', serif;
+    font-size:0.85rem;
+  }
+  .tagline{
+    font-style:bold;
+    color:#8a4a2c;
+    font-size:1.1rem;
+    margin-bottom:15px;
+  }
+
+  .contact-info{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    margin:20px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .footer-quote{
+    color:#f3e9db;
+    font-style:bold;
+    margin-bottom:10px;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Cafnova</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#coffee">Our Coffee</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="about">Welcome to Cafnova</h2>
+    <p>
+      Cafnova is your destination for premium coffee crafted to inspire every moment.
+      We bring together freshly roasted beans, rich flavors, and exceptional quality to deliver the perfect cup. 
+      Whether you love a bold espresso or a smooth latte, Cafnova makes every sip a memorable experience.
+    </p>
+
+    <img src="CoffeePoster.jpg"
+         alt="Cafnova Coffee Poster">
+
+    <h2 id="coffee">Our Coffee</h2>
+
+    <p>
+      At <strong>Cafnova</strong>, coffee is more than a beverage—it's a symbol of craftsmanship,
+      luxury, and passion. Every bean is carefully sourced from the world's finest coffee
+      estates and expertly roasted to unlock its rich aroma, bold flavor, and smooth finish.
+      From the first sip to the last, we deliver an unforgettable premium coffee experience
+      designed for true coffee lovers.
+    </p>
+
+    <div class="coffee-features">
+      <h3>Why Choose Cafnova?</h3>
+      <ul>
+      <li>🌱 Handpicked premium beans from world-class coffee farms.</li>
+      <li>🔥 Expertly slow-roasted for a rich and balanced taste.</li>
+      <li>☕ Crafted with authentic brewing traditions and modern excellence.</li>
+      <li>✨ Elegant quality that reflects a premium coffee lifestyle.</li>
+      </ul>
+    </div>
+
+
+    <!-- Click below to see a simple JavaScript interaction in action. -->
+
+    <section id="contact">
+    <h2>Get in Touch</h2>
+
+    <p class="tagline">
+        "Every Great Day Begins with an Exceptional Cup."
+    </p>
+
+    <p>
+        Thank you for choosing <strong>Cafnova</strong>. Whether you have a question,
+        need assistance with your order, or simply want to share your coffee
+        experience, our dedicated team is always delighted to assist you.
+    </p>
+
+    <div class="contact-info">
+        <p>📍 <strong>Address:</strong> Bhopal, Madhya Pradesh, India</p>
+        <p>📧 <strong>Email:</strong> hello@cafnova.com</p>
+        <p>📞 <strong>Phone:</strong> +91 xxxxx xxxxx</p>
+        <p>🕒 <strong>Hours:</strong> Monday – Saturday | 10:00 AM – 07:00 PM</p>
+    </div>
+
+    <button class="cta-btn"
+        onclick="alert('☕ Thank you for contacting Cafnova! We look forward to serving you with the finest coffee experience.')">
+        Contact Cafnova
+    </button>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-quote">
+        "Coffee is not just a beverage—it's a lifestyle. Welcome to the world of Cafnova."
+    </p>
+    <p>&copy; 2026 Cafnova — Premium Coffee Experience</p>
+  </footer>
+
+</body>
+</html>
