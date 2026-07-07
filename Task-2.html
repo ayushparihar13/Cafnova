@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)file:///C:/Users/ayush/OneDrive/Documents/C++%20Programming/Learning/C++/cafnova.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./Cafnova - Contact &; Feedback_files/CafnovaFavicon.jpeg" type="image/x-icon">
+<title>Cafnova - Contact & Feedback</title>
+<style>
+  :root{
+    --bg-cream:#F7F0E6;
+    --card-cream:#FBF6EE;
+    --dark-brown:#2A1B12;
+    --brown:#7A3E1D;
+    --brown-dark:#6B3410;
+    --accent-gold:#C48A4A;
+    --text-dark:#2A1B12;
+    --text-muted:#5A4A3F;
+    --border-soft:#E8DCC8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background:var(--bg-cream);
+    color:var(--text-dark);
+  }
+  header{
+    background:var(--dark-brown);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 48px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.6rem;
+    font-weight:bold;
+  }
+  .logo span{ font-size:1.4rem; }
+  nav a{
+    color:#f3e9db;
+    text-decoration:none;
+    margin-left:24px;
+    font-family: 'Georgia', serif;
+    font-size:0.95rem;
+  }
+  nav a:hover{ color:#e0925c; } 
+
+  main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:35px;
+    max-width:1200px;
+    padding:40px 20px;
+    margin:0 auto;
+
+  }
+  .card{
+    width:100%;
+    max-width:800px;
+    background:#f3e9db;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  }
+  .card h1{
+    color:var(--brown);
+    font-size:1.9rem;
+    margin:0 0 4px 0;
+  }
+  .underline{
+    width:40px;
+    height:3px;
+    background:var(--brown);
+    margin:8px 0 18px 0;
+  }
+  .card > p.intro{
+    font-family: 'Georgia', sans-serif;
+    color:var(--text-muted);
+    line-height:1.5;
+    margin-bottom:24px;
+  }
+  .contact-layout{
+    display:flex;
+    gap:24px;
+    align-items:stretch;
+  }
+  .info-list{
+    width:240px;
+    min-width:240px;
+    background:#f8f5f1;
+    border-radius:12px;
+    padding:20px;
+  }
+  .contact-layout form{
+    flex:1;
+  }
+  .card{
+    display:flex;
+    flex-direction:column;
+    min-height:650px;
+    width:100%;
+  }
+  .info-item{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:22px;
+    font-family: 'Georgia', sans-serif;
+  }
+  .info-item img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    flex-shrink:0;
+  }
+  .info-item:last-child{ margin-bottom:0; }
+  .icon-circle{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#E9D3B4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    color:var(--brown);
+    font-size:1.1rem;
+  }
+  .info-item strong{
+    display:block;
+    font-size:0.95rem;
+    margin-bottom:2px;
+  }
+  .info-item span{
+    font-size:0.88rem;
+    color:var(--text-muted);
+  }
+  form{ flex:1; }
+  label{
+    display:block;
+    font-family: 'Georgia', sans-serif;
+    font-weight:bold;
+    font-size:0.92rem;
+    margin:14px 0 6px 0;
+  }
+  label:first-of-type{ margin-top:0; }
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--border-soft);
+    border-radius:6px;
+    font-family: 'Georgia', sans-serif;
+    font-size:0.95rem;
+    background:#fff;
+    color:var(--text-dark);
+  }
+  input::placeholder, textarea::placeholder{ color:#B3A99B; font-family: 'Georgia', sans-serif; }
+  textarea{ resize:vertical; min-height:90px; }
+  input:focus, textarea:focus{
+    outline:2px solid var(--accent-gold);
+    outline-offset:1px;
+  }
+  .btn{
+    margin-top:18px;
+    width:100%;
+    background:var(--brown-dark);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    padding:14px;
+    font-size:1rem;
+    font-family: 'Georgia', sans-serif;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    transition:background .2s ease;
+  }
+  .btn:hover{ background:#5A2A0C; }
+
+  .success-msg{
+    display:none;
+    margin-top:14px;
+    background:#EFEAD9;
+    color:#3C6B3C;
+    border-radius:6px;
+    padding:12px 16px;
+    font-family: 'Georgia', sans-serif;
+    font-size:0.9rem;
+    align-items:center;
+    gap:8px;
+  }
+  .success-msg.show{ display:flex; }
+
+  .stars{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-bottom:6px;
+  }
+  .star{
+    font-size:1.6rem;
+    cursor:pointer;
+    color:#D9CBB5;
+    transition:color .15s ease, transform .1s ease;
+  }
+  .star.filled{ color:var(--accent-gold); }
+  .star:hover{ transform:scale(1.1); }
+  .rating-hint{
+    font-family: 'Georgia', sans-serif;
+    font-size:0.85rem;
+    color:var(--text-muted);
+    margin-left:6px;
+  }
+
+  footer{
+    background:var(--dark-brown);
+    color:#EDE3D3;
+    text-align:center;
+    padding:36px 20px 24px 20px;
+  }
+  .footer-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    margin-bottom:20px;
+  }
+  .footer-divider .line{
+    width:120px;
+    height:1px;
+    background:#6B5A47;
+  }
+  .footer-divider .bean{ font-size:1.3rem; color:var(--accent-gold); }
+  footer blockquote{
+    font-style:italic;
+    font-size:1.15rem;
+    margin:0 0 18px 0;
+    font-family: 'Georgia', sans-serif;
+  }
+  footer .copyright{
+    font-family: 'Georgia', sans-serif;
+    font-size:0.85rem;
+    color:#B3A692;
+  }
+
+  @media (max-width: 900px){
+    .contact-layout{ flex-direction:column; }
+    .info-list{ flex:1; }
+    header{ padding:16px 20px; }
+    main{ padding:24px 20px; }
+    nav a{ margin-left:16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="./Cafnova - Contact & Feedback_files/CafnovaFavicon.jpeg" alt="Cafnova Logo" style="width:70px ; height:70px ; border-radius:50% ; object-fit:cover; flex-shrink:0;">Cafnova</div>
+  <nav>
+    <a href="file:///C:/Users/ayush/OneDrive/Documents/C++%20Programming/Learning/C++/cafnova.html#contact" class="active">Contact Cafnova</a>
+    <a href="file:///C:/Users/ayush/OneDrive/Documents/C++%20Programming/Learning/C++/cafnova.html#feedback">Customer Feedback</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Contact Us Card -->
+  <section class="card" id="contact">
+    <h1>Contact Cafnova</h1>
+    <div class="underline"></div>
+    <p class="intro" style="font-family: 'Georgia', sans-serif;">We'd love to hear from you.</p>
+
+    <div class="contact-layout">
+      <div class="info-list">
+        <div class="info-item">
+          <div class="icon-circle">📍</div>
+          <div><strong>Address</strong><span><b>Bhopal, Madhya Pradesh, India</b></span></div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle">✉️</div>
+          <div><strong>Email</strong><span><b>hello@cafnova.com</b></span></div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle">📞</div>
+          <div><strong>Phone</strong><span><b>+91 xxxxx xxxxx</b></span></div>
+        </div>
+        <div class="info-item">
+          <div class="icon-circle">🕒</div>
+          <div><strong>Working Hours</strong><span><b>Monday – Saturday<br>10:00 – 19:00</b></span></div>
+        </div>
+      </div>
+
+      <form id="contactForm">
+        <label for="c-name">Full Name</label>
+        <input type="text" id="c-name" placeholder="Enter your name" required="">
+
+        <label for="c-email">Email Address</label>
+        <input type="email" id="c-email" placeholder="Enter your email" required="">
+
+        <label for="c-subject">Subject</label>
+        <input type="text" id="c-subject" placeholder="Enter subject" required="">
+
+        <label for="c-message">Message</label>
+        <textarea id="c-message" placeholder="Type your message to Cafnova..." required=""></textarea>
+
+        <button type="submit" class="btn">➤ Send Message</button>
+        <div class="success-msg" id="contactSuccess">✅ Thanks! Your message has been sent.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Feedback Card -->
+  <section class="card" id="feedback">
+    <h1>Customer Feedback</h1>
+    <div class="underline"></div>
+    <p class="intro" style="font-family: 'Georgia', sans-serif;">Your feedback helps us improve your Cafnova experience.</p>
+
+    <div class="contact-layout">
+      <div class="info-list">
+        <div class="info-item">
+          <img src="./Cafnova - Contact & Feedback_files/CafnovaFavicon.jpeg" alt="Cafnova Logo" style="width:70px ; height:70px ; border-radius:50% ; object-fit:cover; flex-shrink:0;">
+          <div><span><b>At <strong style="color: black">Cafnova</strong>, every customer's voice matters. 
+            Your valuable feedback inspires us to serve better, brew better, and create memorable coffee experiences. 
+            Thank you for being a part of our journey.</b></span></div>
+        </div>
+      </div>
+
+    <form id="feedbackForm">
+      <label for="f-name">Full Name</label>
+      <input type="text" id="f-name" placeholder="Enter your name" required="">
+
+      <label for="f-email">Email Address</label>
+      <input type="email" id="f-email" placeholder="Enter your email" required="">
+
+      <label>Rate Experience</label>
+      <div class="stars" id="starRating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+
+      <label for="f-feedback">Your Feedback</label>
+      <textarea id="f-feedback" placeholder="Share your experience with Cafnova..." required=""></textarea>
+
+      <button type="submit" class="btn">➤ Submit Feedback</button>
+      <div class="success-msg" id="feedbackSuccess">✅ Thank you for your valuable feedback!</div>
+    </form>
+    </div>
+  </section>
+</main>
+
+  <footer>
+    <p class="footer-quote">
+        "Coffee is not just a beverage—it's a lifestyle. Welcome to the world of Cafnova."
+    </p>
+    <p>© 2026 Cafnova — Premium Coffee Experience</p>
+  </footer>
+
+<script>
+  // Contact form submit
+  const contactForm = document.getElementById('contactForm');
+  const contactSuccess = document.getElementById('contactSuccess');
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    contactSuccess.classList.add('show');
+    contactForm.reset();
+    setTimeout(()=> contactSuccess.classList.remove('show'), 4000);
+  });
+
+  // Star rating
+  let currentRating = 0;
+  const stars = document.querySelectorAll('#starRating .star');
+  const ratingHint = document.getElementById('ratingHint');
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      currentRating = parseInt(star.dataset.value);
+      updateStars();
+      ratingHint.textContent = `(${currentRating} star${currentRating > 1 ? 's' : ''} selected)`;
+    });
+    star.addEventListener('mouseenter', () => {
+      const hoverValue = parseInt(star.dataset.value);
+      stars.forEach(s => {
+        s.classList.toggle('filled', parseInt(s.dataset.value) <= hoverValue);
+      });
+    });
+  });
+  document.getElementById('starRating').addEventListener('mouseleave', updateStars);
+
+  function updateStars(){
+    stars.forEach(s => {
+      s.classList.toggle('filled', parseInt(s.dataset.value) <= currentRating);
+    });
+  }
+
+  // Feedback form submit
+  const feedbackForm = document.getElementById('feedbackForm');
+  const feedbackSuccess = document.getElementById('feedbackSuccess');
+  feedbackForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    feedbackSuccess.classList.add('show');
+    feedbackForm.reset();
+    currentRating = 0;
+    updateStars();
+    ratingHint.textContent = '(Select a rating)';
+    setTimeout(()=> feedbackSuccess.classList.remove('show'), 4000);
+  });
+</script>
+
+
+
+</body></html>
